@@ -1,0 +1,56 @@
+services:
+  iot-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: iot_web
+    volumes:
+      - .:/var/www
+    depends_on:
+      - db
+    networks:
+      - iot_network
+
+  nginx:
+    image: nginx:alpine
+    container_name: iot_nginx
+    ports:
+      - "8006:80"
+    volumes:
+      - .:/var/www
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - iot-web
+    networks:
+      - iot_network
+
+  db:
+    image: mysql:latest
+    container_name: iot_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: iot
+    volumes:
+      - db_data_iot:/var/lib/mysql
+    networks:
+      - iot_network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: iot_phpmyadmin
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "8082:80"
+    depends_on:
+      - db
+    networks:
+      - iot_network
+
+networks:
+  iot_network:
+    driver: bridge
+
+volumes:
+  db_data_iot:
