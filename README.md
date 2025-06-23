@@ -22,12 +22,7 @@ This IoT-based infaq monitoring system uses a TCS3200 color sensor to detect the
 of money coming in based on the color of the currency. data is sent via ESP8266 to the server in real-time.
 
 
-<img src="https://github.com/user-attachments/assets/331c555e-3059-4243-ac09-8f10d133443b" width="1020"/>
-
-
-
-
-
+<img src="https://github.com/user-attachments/assets/adb23ff5-cdd9-4693-96a7-4ceeb7852ee2" width="1020"/>
 
 
 ## **B. Application Features**
@@ -35,9 +30,6 @@ of money coming in based on the color of the currency. data is sent via ESP8266 
 2. Sensor Status Monitor the condition of the TCS3200 sensor and ESP32 connection, complete with the last update time.
 3. Daily Statistics Provides a bar graph to display daily infaq amount data for easy monitoring.
 
-<p align="center">
-<img src="https://github.com/user-attachments/assets/1033bee5-5bdb-441b-8a55-f35702fe302a" width="200">
-</p>
 
 
 For more details, please follow the implementation steps in the Infaq Monitoring System check report (pdf).
