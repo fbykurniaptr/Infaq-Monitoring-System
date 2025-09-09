@@ -1,16 +1,8 @@
->👥 Kelompok 5  📅 23 June 2025</strong>
+>Feby 📅 23 June 2025</strong>
 
 
 <p align="center">
-  
-<pre>
-Feby Kurnia Putri     : 233140701111003
-Anas Khalif Muttaqien : 233140707111105
-Ananda Setiawati      : 233140707111122
-Syarifah Syamilah     : 233140700111094
-</pre>
 
-</p>
 
 
 # IOT BASED REAL-TIME DONATION MONITORING SYSTEM INFAQ MONITORING SYSTEM
